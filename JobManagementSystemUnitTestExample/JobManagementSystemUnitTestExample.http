@@ -1,0 +1,6 @@
+@JobManagementSystemUnitTestExample_HostAddress = http://localhost:5283
+
+GET {{JobManagementSystemUnitTestExample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
