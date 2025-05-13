@@ -13,7 +13,7 @@ namespace JobManagementSystem.Tests.DataAccess;
 /// Note, the further along an array we look, the more likely that the data will be changed in the future breaking this test.
 /// Therefore, currently, we only look within the first two items and no further.
 /// </summary>
-public class SeedDataExtensionMethodTests : DbMockedTestFixture
+public class SeedDataExtensionMethodTests : DbMockedTestFixture<JobManagementContext>
 {
     [Fact]
     public void SeedData_Runs()

@@ -8,7 +8,7 @@ namespace JobManagementSystem.Tests.Services;
 /// <summary>
 /// These are unit tests for the JobService.  As this is a service, we wish to test the functionality when a "unit of work" happens
 /// </summary>
-public class JobServiceTests : DbMockedTestFixture
+public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
 {
     public readonly IEnumerable<Job> _jobs;
     public readonly IEnumerable<Employee> _employees;
