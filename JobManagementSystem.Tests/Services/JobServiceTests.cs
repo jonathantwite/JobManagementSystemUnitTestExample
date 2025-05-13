@@ -22,6 +22,7 @@ public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
     public const string jobRole2Description = "Job Role 2 Description";
     public const string taxInformation1Description = "Tax Info 1";
     public const string taxInformation2Description = "Tax Info 2";
+    public const string taxInformation3Description = "Tax Info 3";
     public const string taxRegime1CountryCode = "ABC";
     public const string taxRegime2CountryCode = "ZYX";
     public const string taxRegime1Description = "Tax Regime 1 Description";
@@ -50,6 +51,7 @@ public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
 
         var ti1 = new TaxInformation { Description = taxInformation1Description, TaxRegime = tr1 };
         var ti2 = new TaxInformation { Description = taxInformation2Description, TaxRegime = tr2 };
+        var ti3 = new TaxInformation { Description = taxInformation3Description, TaxRegime = tr1 };
 
         var j1 = new Job
         {
@@ -75,7 +77,7 @@ public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
 
         j1.TaxInformation.Add(ti1);
         j1.TaxInformation.Add(ti2);
-        j2.TaxInformation.Add(ti1);
+        j2.TaxInformation.Add(ti3);
 
         var e1 = new Employee { Id = 1, Name = employee1Name, JobRole = new JobRole { Id = 1, Description = jobRole1Description } };
         var e2 = new Employee { Id = 2, Name = employee2Name, JobRole = new JobRole { Id = 2, Description = jobRole2Description } };
@@ -158,7 +160,7 @@ public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
     /// A London test would mock out the TaxService and test that the value provided by the TaxService is placed in the DTO correctly.  More tests would be required to test the TaxService.
     /// The issue with this is that the tests now become aware, and dependent on, the code architecture, and refactoring will cause the tests to fail.
     /// This failure does not add value as it is a false negative.
-    /// This test is written in a London style which defines an "Isolated Test" as an "Isolate piece of work" and only cares about one thing - is the data returned correct.
+    /// This test is written in a Classical style which defines an "Isolated Test" as an "Isolate piece of work" and only cares about one thing - is the data returned correct.
     /// We do not care how the TaxService works (nor any other dependencies), we would only mock external or persistence dependencies.
     /// </summary>
     /// <returns></returns>
