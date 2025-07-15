@@ -15,7 +15,7 @@ namespace JobManagementSystem.Tests.UnitTests.Controllers;
 /// These tests completely ignore how the services work.
 ///
 /// Note, as far as I am aware, this code does not use any JSON serialization, even when using JsonResult.
-/// Therefore integration tests are still required to ensure that the data is being serialized correctly (e.g. empty arrays do not become nulls)
+/// Therefore integration or end-2-end tests are still required to ensure that the data is being serialized correctly (e.g. empty arrays do not become nulls)
 /// </summary>
 public class JobControllerTests
 {

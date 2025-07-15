@@ -73,11 +73,6 @@ public class EmployeeControllerTests
         Assert.NotNull(forenameError);
     }
 
-    /// <summary>
-    /// This test shows an interesting case where code coverage fails to cover everything required.
-    /// Technically, every line of the Forename validator is covered and so hits 100% coverage, however, we never actually test the text output that is returned to the user.
-    /// </summary>
-    /// <returns></returns>
     [Fact]
     public async Task CreateEmployee_Returns422ForTooLongSurname()
     {

@@ -13,6 +13,12 @@ public class EmployeeController(IEmployeeService employeeService, IValidator<Cre
     public readonly IEmployeeService _employeeService = employeeService ?? throw new ArgumentNullException(nameof(employeeService));
     public readonly IValidator<CreateEmployeeRequest> _createEmployeeRequestValidator = createEmployeeRequestValidator ?? throw new ArgumentNullException(nameof(createEmployeeRequestValidator));
 
+    /// <summary>
+    /// This is an example of a controller method with validation using FluentValidation.  When testing, if possible, we do not want to be tied into the FluentValidation library so that we can swap this library out.
+    /// It would be better if Microsoft supplied a validation abstraction (like they do with logging) so that we could inject any validation library we wanted to.  They do not currently do this, so we must use the FluentValidation interfaces.
+    /// </summary>
+    /// <param name="employeeName"></param>
+    /// <returns></returns>
     [HttpPost]
     public async Task<IResult> CreateEmployee([FromBody] CreateEmployeeRequest employeeName)
     {

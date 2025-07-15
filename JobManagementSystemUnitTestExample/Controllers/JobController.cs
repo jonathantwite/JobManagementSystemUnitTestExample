@@ -17,7 +17,7 @@ public class JobController(IJobService jobService, IEmployeeService employeeServ
     }
 
     /// <summary>
-    /// This is an example of a controller that only considers the response required given the request.
+    /// This is an example of a controller method that only considers the response required given the request.
     /// When testing, the service layer calls can be mocked so that the tests focus on what the controller is responsible for.
     /// </summary>
     /// <param name="jobId"></param>

@@ -4,7 +4,7 @@ using JobManagementSystem.Entities;
 namespace JobManagementSystem.Tests.UnitTests.DataAccess;
 
 /// <summary>
-/// This set of tests confirms that the setup method runs and inserts data
+/// This set of tests confirms that the setup method runs and inserts data.
 /// It is a FLAKY test as it depends on the data in the SeedData() method that could change at any time.
 /// Therefore, we ensure to test a wide range of values are correctly there, but do not try to have 100% coverage
 /// as this is unsustainable in the future.

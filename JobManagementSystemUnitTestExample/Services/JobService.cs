@@ -9,6 +9,10 @@ public class JobService(JobManagementContext dbContext, ITaxService taxService) 
     private readonly JobManagementContext _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
     private readonly ITaxService _taxService = taxService ?? throw new ArgumentNullException(nameof(taxService));
 
+    /// <summary>
+    /// This method uses the TaxService, however, when testing, we do not care about this internal implementation detail.
+    /// </summary>
+    /// <returns></returns>
     public async Task<IEnumerable<JobResponse>> GetAllJobs()
     {
         var jobs = await _dbContext.Jobs
