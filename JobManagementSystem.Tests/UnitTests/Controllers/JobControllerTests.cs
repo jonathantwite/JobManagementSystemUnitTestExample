@@ -3,7 +3,7 @@ using JobManagementSystem.Responses.Job;
 using JobManagementSystem.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JobManagementSystem.Tests.Controllers;
+namespace JobManagementSystem.Tests.UnitTests.Controllers;
 
 /// <summary>
 /// These tests test the user-interacting logic contained within the JobController.

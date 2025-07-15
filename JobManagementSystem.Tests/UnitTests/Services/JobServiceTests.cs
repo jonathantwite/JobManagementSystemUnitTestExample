@@ -3,7 +3,7 @@ using JobManagementSystem.Entities;
 using JobManagementSystem.Services;
 using Microsoft.EntityFrameworkCore;
 
-namespace JobManagementSystem.Tests.Services;
+namespace JobManagementSystem.Tests.UnitTests.Services;
 
 /// <summary>
 /// These are unit tests for the JobService.  As this is a service, we wish to test the functionality when a "unit of work" happens
@@ -79,8 +79,8 @@ public class JobServiceTests : DbMockedTestFixture<JobManagementContext>
         j1.TaxInformation.Add(ti2);
         j2.TaxInformation.Add(ti3);
 
-        var e1 = new Employee { Id = 1, Name = employee1Name, JobRole = new JobRole { Id = 1, Description = jobRole1Description } };
-        var e2 = new Employee { Id = 2, Name = employee2Name, JobRole = new JobRole { Id = 2, Description = jobRole2Description } };
+        var e1 = new Employee { Id = 1, Name = employee1Name, Email = "a@a.com", JobRole = new JobRole { Id = 1, Description = jobRole1Description } };
+        var e2 = new Employee { Id = 2, Name = employee2Name, Email = "a@a.com", JobRole = new JobRole { Id = 2, Description = jobRole2Description } };
         j1.Employees.Add(e1);
         j2.Employees.Add(e1);
         j2.Employees.Add(e2);

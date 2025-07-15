@@ -31,19 +31,19 @@ public static class SeedDataExtensionMethod
 
         context.JobRoles.AddRange(jr1, jr2, jr3, jr4, jr5, jr6, jr7, jr8, jr9);
 
-        var e1 = new Employee() { Id = 1, Name = "Adam Appleby", JobRoleId = jr1.Id };
-        var e2 = new Employee() { Id = 2, Name = "Betty Black", JobRoleId = jr2.Id };
-        var e3 = new Employee() { Id = 3, Name = "Catherine Chatsworth", JobRoleId = jr3.Id };
-        var e4 = new Employee() { Id = 4, Name = "Dennis Drupt", JobRoleId = jr4.Id };
-        var e5 = new Employee() { Id = 5, Name = "Eric Enest", JobRoleId = jr5.Id };
-        var e6 = new Employee() { Id = 6, Name = "Fiona Flough", JobRoleId = jr5.Id };
-        var e7 = new Employee() { Id = 7, Name = "Gina Gerry", JobRoleId = jr6.Id };
-        var e8 = new Employee() { Id = 8, Name = "Henry Hatter", JobRoleId = jr6.Id };
-        var e9 = new Employee() { Id = 9, Name = "Ingrid Irvine", JobRoleId = jr7.Id };
-        var e10 = new Employee() { Id = 10, Name = "John Jacks", JobRoleId = jr7.Id };
-        var e11 = new Employee() { Id = 11, Name = "Kiara Klive", JobRoleId = jr7.Id };
-        var e12 = new Employee() { Id = 12, Name = "Liam Lovegood", JobRoleId = jr8.Id };
-        var e13 = new Employee() { Id = 13, Name = "Marge Mavis", JobRoleId = jr9.Id };
+        var e1 = new Employee() { Id = 1, Name = "Adam Appleby", Email = "aa@company.com", JobRoleId = jr1.Id };
+        var e2 = new Employee() { Id = 2, Name = "Betty Black", Email = "bb@company.com", JobRoleId = jr2.Id };
+        var e3 = new Employee() { Id = 3, Name = "Catherine Chatsworth", Email = "cc@company.com", JobRoleId = jr3.Id };
+        var e4 = new Employee() { Id = 4, Name = "Dennis Drupt", Email = "dd@company.com", JobRoleId = jr4.Id };
+        var e5 = new Employee() { Id = 5, Name = "Eric Enest", Email = "ee@company.com", JobRoleId = jr5.Id };
+        var e6 = new Employee() { Id = 6, Name = "Fiona Flough", Email = "ff@company.com", JobRoleId = jr5.Id };
+        var e7 = new Employee() { Id = 7, Name = "Gina Gerry", Email = "gg@company.com", JobRoleId = jr6.Id };
+        var e8 = new Employee() { Id = 8, Name = "Henry Hatter", Email = "hh@company.com", JobRoleId = jr6.Id };
+        var e9 = new Employee() { Id = 9, Name = "Ingrid Irvine", Email = "ii@company.com", JobRoleId = jr7.Id };
+        var e10 = new Employee() { Id = 10, Name = "John Jacks", Email = "jj@company.com", JobRoleId = jr7.Id };
+        var e11 = new Employee() { Id = 11, Name = "Kiara Klive", Email = "kk@company.com", JobRoleId = jr7.Id };
+        var e12 = new Employee() { Id = 12, Name = "Liam Lovegood", Email = "ll@company.com", JobRoleId = jr8.Id };
+        var e13 = new Employee() { Id = 13, Name = "Marge Mavis", Email = "mm@company.com", JobRoleId = jr9.Id };
 
         context.Employees.AddRange(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13);
 

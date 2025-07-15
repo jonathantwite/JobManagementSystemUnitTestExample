@@ -11,6 +11,10 @@ builder.Services.AddDbContext<JobManagementContext>(options => options.UseInMemo
 
 builder.Services.AddScoped<IJobService, JobService>();
 builder.Services.AddScoped<ITaxService, TaxService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IEmailSenderService, EmailSenderService>();
+builder.Services.AddScoped<ICommunicationService, CommunicationService>();
+builder.Services.AddScoped<ISpecialUserService, SpecialUserService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>

@@ -1,5 +1,4 @@
 ﻿using JobManagementSystem.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobManagementSystem.Controllers;
@@ -17,6 +16,13 @@ public class JobController(IJobService jobService, IEmployeeService employeeServ
         return new JsonResult(await _jobService.GetAllJobs());
     }
 
+    /// <summary>
+    /// This is an example of a controller that only considers the response required given the request.
+    /// When testing, the service layer calls can be mocked so that the tests focus on what the controller is responsible for.
+    /// </summary>
+    /// <param name="jobId"></param>
+    /// <param name="employeeId"></param>
+    /// <returns></returns>
     [HttpPatch]
     public async Task<IActionResult> AddEmployeeToJob(int jobId, [FromBody]int employeeId)
     {

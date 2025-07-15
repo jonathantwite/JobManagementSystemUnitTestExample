@@ -1,7 +1,7 @@
 ﻿using JobManagementSystem.DataAccess;
 using JobManagementSystem.Entities;
 
-namespace JobManagementSystem.Tests.DataAccess;
+namespace JobManagementSystem.Tests.UnitTests.DataAccess;
 
 /// <summary>
 /// This set of tests confirms that the setup method runs and inserts data
@@ -39,7 +39,7 @@ public class SeedDataExtensionMethodTests : DbMockedTestFixture<JobManagementCon
         var tr2 = new TaxRegime() { Id = 2, CountryCode = "USA", Description = "Overseas - United States", MinimumThreshold = 1000M, TaxRate = 0.14M };
         var jc1 = new JobCategory() { Id = 1, Description = "Management" };
         var jr2 = new JobRole() { Id = 2, Description = "CFO" };
-        var e2 = new Employee() { Id = 2, Name = "Betty Black", JobRoleId = jr2.Id, JobRole = jr2 };
+        var e2 = new Employee() { Id = 2, Name = "Betty Black", Email = "bb@company.com", JobRoleId = jr2.Id, JobRole = jr2 };
         var j2 = new Job() { Id = 2, Description = "Year end accounts", JobCategoryId = jc1.Id, JobCategory = jc1 };
 
         // Assert

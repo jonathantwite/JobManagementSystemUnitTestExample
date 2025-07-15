@@ -1,7 +1,7 @@
 ﻿using JobManagementSystem.Entities;
 using JobManagementSystem.Services;
 
-namespace JobManagementSystem.Tests.Services;
+namespace JobManagementSystem.Tests.UnitTests.Services;
 
 /// <summary>
 /// The TaxService has complicated logic in it that is not always easy to setup from other services.  Therefore the TaxService can be argued to warrant its own tests.

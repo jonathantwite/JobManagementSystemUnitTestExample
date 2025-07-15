@@ -20,6 +20,6 @@ public class JobManagementContext(DbContextOptions<JobManagementContext> options
     public DbSet<JobCategory> JobCategories { get; set; }
     public DbSet<Employee> Employees { get; set; }
     public DbSet<TaxRegime> TaxRegimes { get; set; }
-    internal DbSet<JobRole> JobRoles { get; set; }
-    internal DbSet<TaxInformation> TaxInformations { get; set; }
+    public DbSet<JobRole> JobRoles { get; set; }
+    public DbSet<TaxInformation> TaxInformations { get; set; }
 }
